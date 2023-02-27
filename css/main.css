@@ -28,7 +28,6 @@ h4 {
 
 h1 {
 	font-size: 1.875em;
-	justify-content: center;
 }
 
 h2 {
@@ -58,7 +57,7 @@ header {
 
 header h1 {
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 0 20px 0;
 	width: 100%;
 	border-bottom: 3px solid #77A466;
 }
@@ -68,21 +67,20 @@ header h1 span {
 }
 
 header nav {
-	justify-content: center;
-	padding: 46px 0;
+	padding: 20px 0;
 }
 
 header nav ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 header nav ul li {
-	display: inline-block;
 	font-size: .875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0 10px;
+	padding: 10px 0;
 	width: 100%;
 }
 
@@ -121,24 +119,21 @@ header nav ul li a {
 .section-one,
 .section-two,
 .section-three {
-	justify-content: center;
 	box-sizing: border-box;
-	padding: 0 40px;
-	width: 100%;
 }
 
 .section-one {
-	/*width: 29%;*/
+	width: 100%;
 }
 
 .section-two {
-	/*width: 29%;*/
+	width: 100%;
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
 }
 
 .section-three {
-	/*width: 29%;*/
+	width: 100%;
 }
 
 .bottom-section h3 {
@@ -161,7 +156,6 @@ header nav ul li a {
 footer {
 	display: flex;
 	justify-content: center;
-	text-align: center;
 	margin-top: 8px;
 }
 
@@ -170,4 +164,60 @@ footer span {
 	text-transform: lowercase;
 	color: #45610E;
 	font-size: .875em;
+}
+
+/******* Tablet Media Query ********/
+@media all and (min-width: 768px) {
+
+	/***** Bottom Section *****/
+	.bottom-section .content-wrapper {
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 26%;
+	}
+
+	.section-two {
+		width: 40%;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+		border-top: none;
+		border-bottom: none;
+		padding: 0 30px;
+	}
+
+	.section-three {
+		width: 26%;
+	}
+}
+
+/********* Desktop Media Query ********/
+@media all and (min-width: 1200px) {
+	body {
+		font-size: 1em;
+	}
+
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+		
+	}
+
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 21%;
+	}
+	
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
